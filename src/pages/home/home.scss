@@ -1,3 +1,39 @@
 page-home {
+    .content-table{
+        width: 90%;
+        border: .3vh solid;
+        border-radius: 5px;
+        margin: 37px auto;
+        text-align: center;
+    }
+    .column-table{
+        width: 30%;
+    }
 
+    .title-content{
+        margin: 10px;
+      text-align: center;
+    }
+.table-row{
+    border:1px solid;
+    width: 20%;
+    font-size: 2em;
+}
+.table-row:nth-child(even) {
+background-color: #e8e8e8
+}
+.table-test{
+    border: 1px solid;
+    margin:30px 30px;
+}
+.title-content{
+    margin: 25px;
+}
+.insert-item{
+    margin: 20px 0;
+    display: flex;
+}
+.inputContainer{
+    width: 20%;
+}
 }

@@ -1,14 +1,56 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
+    <ion-title class="title-content">
+      Aplication test Service
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+
+
+  <div class="content-table">
+    <div class="title-content">
+      <h1>{{serviceData}}</h1>
+      <button ion-button (click)="ejecutarServicio()">Consumir servicio</button>
+    </div>
+
+    <table class="table-test">
+      <tr class="table-row">
+        <td *ngFor="let titleContent of titleContent">{{titleContent}}</td>
+      </tr>
+      <tr *ngFor="let service of responseService" class="table-row">
+        <td class="column-table"><span>{{service.id}}</span></td>
+        <td class="column-table"><span>{{service.name}}</span></td>
+        <td class="column-table"><span>{{service.description}}</span></td>
+      </tr>
+
+    </table>
+<div>
+    <form  class="insert-item" (ngSubmit)="insertItem()">
+      <ion-item class="inputContainer">
+        <ion-label floating> Id *</ion-label>
+        <ion-input class="form-control" name="id" required minlength="4" type="number" [(ngModel)]="id"></ion-input>
+      </ion-item>
+      <ion-item class="inputContainer">
+
+        <ion-label floating> Nombre *</ion-label>
+        <ion-input class="form-control" name="name" required minlength="4" type="text" [(ngModel)]="name"></ion-input>
+      </ion-item>
+      <ion-item class="inputContainer">
+
+        <ion-label floating>Descripcion*</ion-label>
+        <ion-input class="form-control" name="description" required minlength="4" type="text" [(ngModel)]="description"></ion-input>
+      </ion-item>
+      <!--Botones de ingresp a la aplicación -->
+      <br><br>
+
+      <button class="button" id="ingreso" ion-button>Agregar item</button>
+
+      <br>
+    </form>
+  </div>
+  </div>
+
 </ion-content>
